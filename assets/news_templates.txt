@@ -1,0 +1,155 @@
+# News templates: kind | condition | headline | body
+# Conditions: * | band=Rich | era>=4 | era<2 | persp=A/B/W | tone=Tragedy | has=Slot  (comma = AND)
+# Slots in {braces} come from the story seed. {CauseLine} renders the seed's causes, or says they are unknown.
+# Add your own in data/news_templates.txt next to the executable.
+
+dawn|*|The {Species} spread across the world|Long before cities, {SpeciesDesc} have become the first thinking people of this planet. {Tribes} wandering bands now roam its fertile lands. {CauseLine}
+tribe_joins|*|The {Tribe} band settles among the {Civ}|The wandering {Tribe} have joined {City}, adding their hands and stories to the city. {CauseLine}
+
+found_civ|*|{Leader} raises {City}: a new people enters the chronicle|The {Demonym} have passed from tribe to city. {City}, founded at {Site}, begins with {Pop} people and a leader described as {Trait}. Their gift: {Ability}. Neighbors: {Neighbors}. {CauseLine}
+found_civ|*|The {Demonym} found {City} at {Site}|A new civilization, the {Civ}, rises under {Leader}, known to be {Trait}. {Pop} souls inhabit the first city. Neighbors: {Neighbors}. {CauseLine}
+found_citystate|*|{City} stands alone: a {Kind} city-state is born|The free city of {City} declares itself under {Leader}. It will court the great powers but bow to none. {CauseLine}
+
+first_contact|*|The {CivA} and the {CivB} meet|Scouts of the {CivA} have met the {CivB}. Gifts were exchanged; so were wary looks. {CauseLine}
+first_contact_continents|*|Two worlds meet: the {CivA} reach the {CivB} across the sea|For the first time, peoples of separate continents stand face to face. Knowledge, goods — and disease — will now flow between them. {CauseLine}
+
+era|era<2|The {Civ} enter the {Era} age|Elders of the {Civ} speak of a new way of living. {CauseLine}
+era|era>=2,era<6|{Civ} enters the {Era} era|Heralds proclaim a new age for the {Civ}, now firmly in the {Era} era. {CauseLine}
+era|era>=6|{Civ} crosses into the {Era} era|Analysts confirm the {Civ} have entered the {Era} era. Markets react. {CauseLine}
+
+resource_revealed|*|{Resource} found beneath {City}|With {Tech}, prospectors of the {Civ} have recognized {Resource} deposits near {City}. The city's prospects have changed overnight. {CauseLine}
+tech_first|*|The {Civ} master {Tech} — a first for the world|No other people knows {Tech}. The {Civ} now hold an edge their neighbors will covet. {CauseLine}
+tech_diffused|*|{Tech} reaches the {Civ}|The {Civ} have learned {Tech}, years faster than they could have alone. {CauseLine}
+
+succession|*|{New} succeeds {Old} at the head of the {Civ}|After a reign of {Reign} years, {Old} is gone. By {Succession} succession {New}, said to be {Trait}, takes power. Neighbors are re-weighing old friendships. {CauseLine}
+succession_crisis|*|Succession crisis grips the {Civ}|{Old} has died after {Reign} years and two factions claim the throne. {New} holds the capital for now, but the provinces are restless. {CauseLine}
+succession_resolved|*|The {Civ} reunite under one ruler|The factions of the succession war have laid down their quarrel. {CauseLine}
+government|*|The {Civ} become a {New}|The old {Old} is gone; {Leader} presides over a {New}. Expect unrest while the new order settles. {CauseLine}
+
+building|*|{City} completes its {Building}|Governor {Governor} opened the new {Building} to crowds. {CauseLine}
+new_city|*|Settlers from {From} found {City}|The {Civ} have planted a new city, {City}, at {Site}. {CauseLine}
+wonder_race|*|Race for the {Wonder}: {City} joins the contest|{City} of the {Civ} has begun work on the {Wonder}. Another city is already building. Only one can finish. {CauseLine}
+wonder|has=Rival|{City} completes the {Wonder}, beating {Rival}|Crowds fill the streets of {City} ({Band}) as the {Wonder} is unveiled under {Leader}. {Rival}'s builders must abandon their work. {CauseLine}
+wonder|*|The {Wonder} rises in {City}|The {Civ} have completed the {Wonder}, a marvel for the ages, in {City} ({Band}). {CauseLine}
+
+religion_founded|*|The {Religion} is born in {City}|Prophets of the {Civ} preach a {Theme} faith: the {Religion}. {City} becomes its holy city. {CauseLine}
+conversion|*|{City} turns to the {Religion}|Temples in {City} now honor the {Religion}. {CauseLine}
+schism|*|Schism: the {New} breaks from the {Old}|{City} leads converts away from the founders' doctrine, founding the {New}. Diplomats scramble to recalculate. {CauseLine}
+awakening|*|A great awakening sweeps {City}|Crowds fill the shrines of {City}; missionaries prepare to go abroad. {CauseLine}
+relic|*|Relic unearthed near {City}: {Relic}|Diggers near {City} have recovered {Relic}. Priests expect pilgrims. {CauseLine}
+pilgrimage|*|Pilgrims crowd the roads to {City}|Inns are full and alms flow: the relic of {City} has made it a pilgrimage city. {CauseLine}
+relic_theft|*|The relic of {City} is stolen|The sacred relic of {City} ({Band}) vanished in the night. Suspicion falls on {Thief}. {CauseLine}
+
+city_flips|*|{City} defects from the {Old} to the {New}|Without a shot, the people of {City} have declared for the {New}. The {Old} call it treachery. {CauseLine}
+civ_falls|has=By|The {Civ} are no more, destroyed by the {By}|After {Years} years, the last city of the {Civ} has fallen. {Leader} was their final ruler. Ruins and refugees remain. {CauseLine}
+civ_falls|*|The {Civ} pass from history|After {Years} years, the {Civ} have collapsed. {Leader} was their final ruler. Ruins and refugees remain. {CauseLine}
+citystate_falls|*|The free city of {Civ} falls|After {Years} years of independence the city-state of {Civ} is gone. {CauseLine}
+civil_war|*|Civil war splits the {Civ}: the {New} rise in {City}|{Count} cities have broken away to form the {New}, with {City} as their seat. Cousins now face cousins. {CauseLine}
+
+trade_agreement|*|The {CivA} and {CivB} sign a trade agreement|Merchants of both peoples may now cross freely. {CauseLine}
+research_agreement|*|{LeaderA} and {LeaderB} agree to share scholars|The {CivA} and {CivB} will pool their learning. {CauseLine}
+alliance|*|Alliance: the {CivA} and {CivB} swear mutual defense|{LeaderA} and {LeaderB} have bound their peoples together. An attack on one is now an attack on both. {CauseLine}
+alliance_broken|*|The alliance of the {CivA} and {CivB} collapses|The pact is torn up. Neither side expects to sign another soon. {CauseLine}
+suzerain|*|The {Civ} become suzerain of {CityState}|The {Kind} city-state of {CityState} now looks to the {Civ} for protection and favor. {CauseLine}
+route_opened|*|New {Mode} route links {CityA} and {CityB}|Goods now flow between {CityA} ({CivA}) and {CityB} ({CivB}). {CauseLine}
+
+war_declared|persp=W|{CivA} declares war on {CivB}: aims stated as {WarAim}|The {CivA} under {LeaderA} have declared war on the {CivB}. {CauseLine}
+war_declared|persp=A|{LeaderA} calls the nation to recover {Claim} — "a debt of {GrievanceAge} years"|In the capital of the {CivA}, crowds cheer the call to arms against the {CivB}. {CauseLine}
+war_declared|persp=B|{LeaderB} denounces "a war for {Motive}" and rallies the {CivB}|{LeaderB} of the {CivB} {Defense} after the {CivA} declared war. {CauseLine}
+ally_joins|*|The {Ally} join the war against the {CivA}|Honoring their pact with the {CivB}, the {Ally} march to war. {CauseLine}
+peace|*|Peace between the {CivA} and {CivB} after {Years} years|The war is over. The {CivB} pay {Reparations} gold in reparations; old grievances will outlive the treaty. {CauseLine}
+battle|*|The {Winner} defeat the {Loser} in {Region}|Fields in {Region} are strewn with the fallen. {CauseLine}
+city_captured|*|{City} falls to the {Civ}|After a siege, {City} has been taken from the {Old}. The victors carried off {Loot} gold. {CauseLine}
+city_razed|*|{City} is razed by the {Civ}|The {Civ} have burned {City}, once a city of the {Old}, to the ground. Survivors flee. {CauseLine}
+raiders_loot|*|Raiders sack the outskirts of {City}|A raiding band carried off {Amount} gold from {City} ({Band}). {CauseLine}
+raiders_repelled|*|{City} drives off raiders|The garrison of {City} turned back a raiding band. {CauseLine}
+spy_caught|*|Spy ring uncovered in {City}|Agents of the {Civ} were caught in {City} ({Band}) of the {Victim}; they had taken {Stole}. A diplomatic crisis looms. {CauseLine}
+
+rankings|*|Rankings of the half-century: the {Leader} lead|At {Year}, the standing of the peoples: {List}. Envy follows the leader. {CauseLine}
+richest_city|*|{City} named richest city of the decade — {Again}|{City} ({Civ}, {Spec}) leads the decade at wealth {Wealth} ({Band}), built on {Top}. The widest gap on the planet is {Gap}.
+decadal|*|Decadal Review, {From}–{To}|{Lines}
+restraint|*|{City} weathers the {Crisis} unaided|The steward watched and did not act; {City} came through on its own. Gaia rewards restraint. {CauseLine}
+
+# ---- economic events
+heist|band=Opulent|The {Bank} robbery: {City} loses {Amount} — and its sense of safety|{City} ({Band}, wealth {Wealth}) reports {LossDetail}. Governor {Governor} has chosen {Response}. Trade partners are watching {TradePartner} for a reaction. {CauseLine} In a city this opulent, prestige suffers as much as the treasury — and copycats take note.
+heist|*|Vaults breached in {City}: {Amount} taken in the night|{City} ({Band}, wealth {Wealth}) reports {LossDetail}. Governor {Governor} has chosen {Response}. Trade partners are watching {TradePartner} for a reaction. {CauseLine}
+bank_run|era<5|Run on the guildhalls of {City}|Depositors besieged the counting houses of {City} ({Band}). The {Civ} {Response}. {CauseLine}
+bank_run|*|Bank run in {City}|Lines stretch around the banks of {City} ({Band}). The {Civ} {Response}. {CauseLine}
+luxury_crash|*|Luxury prices collapse in {City}|Merchants of {City} ({Band}) are ruined as luxury prices halve. {CauseLine}
+gold_rush|*|{Resource} rush at {City}!|Prospectors pour into {City} after a rich {Resource} strike. The {Civ} treasury swells. {CauseLine}
+boomtown|*|{City} becomes a boomtown|Tents become streets and streets become districts in {City}. {CauseLine}
+banking_center|*|From mine to money: {City} becomes a banking center|Rush fortunes in {City} ({Band}) have built counting houses and markets. {CauseLine}
+boomtown_bust|*|The boom ends in {City}|The rush is over and {City} empties. {Counterfactual} {CauseLine}
+merchant_prince|*|Merchant prince {Prince} courts {City}|{Prince} offers to fund {City}'s next great work. Governor {Governor} {Response}. {CauseLine}
+smuggling|*|Smugglers run goods between {City} and {Poor}|A smuggling ring thrives on the gap between {City} ({Band}) and {Poor}. {CauseLine}
+predatory_loan|*|{Lender} offers {City} a loan|Lenders from {Lender} ({LenderCiv}) offered {City} ({Band}) gold now, repayment later. {City} {Response}. {CauseLine}
+debt_takeover|*|{City} seized by the {Lender} over unpaid debt|The loan came due and {City} could not pay. The {Lender} have taken the city. {CauseLine}
+forgery|*|Forgery scandal rocks {City}'s art market|Celebrated works in {City} ({Band}) are fakes. Governor {Governor} {Response}. {CauseLine}
+market_fire|*|Fire in the market of {City}|Flames swept {City} ({Band}), destroying {Loss}. {Counterfactual} {CauseLine}
+windfall|*|Rich season for {City}'s merchants|Caravans and ships return to {City} with {Amount} gold in profit. {CauseLine}
+exposition|*|{City} {Result}|{City} ({Band}) bid {Bid} gold to host the world's great exposition and {Result}. {CauseLine}
+counterfeit|*|Counterfeit coins flood {City}|False coin has entered the markets of {City}. {CauseLine}
+tax_revolt|*|Tax revolt in {City}|Crowds in {City} ({Band}) refuse to pay; the {Civ} {Response}. {CauseLine}
+
+# ---- ecological events
+flood|*|The river floods {City}|Water fills the low streets of {City} ({Band}); about {Loss} people lost or displaced. {Counterfactual} {CauseLine}
+drought|*|Drought settles over {City}|Fields around {City} ({Band}) crack in the sun. {City} {Response}. {CauseLine}
+drought_ends|*|Rain returns to {City}|The drought around {City} has broken. {CauseLine}
+famine|has=RichNeighbor|Empty granaries in {City}|After {FailedHarvests} failed harvests, {City} ({Band}) has exhausted its stores. {Response}. Chroniclers note the same harvest failure in {RichNeighbor} ended in imports and high prices, not hunger — the difference was {Gap} points of wealth. {CauseLine}
+famine|*|Empty granaries in {City}|After {FailedHarvests} failed harvests, {City} ({Band}) has exhausted its stores. {Response}. {Counterfactual} {CauseLine}
+exodus|*|Exodus: {Moved} leave {City} for {Dest}|Families from {City} walk toward {Dest} ({DestCiv}), where there is bread. {CauseLine}
+drought_relief|*|Relief works restore {City}|The {Civ} funded canals and granaries; {City} recovers. {CauseLine}
+dust_bowl|*|{City} becomes a dust bowl|Abandoned fields blow away around {City}. {CauseLine}
+wildfire|*|Wildfire near {City}|Forests around {City} burn for weeks. {Counterfactual} {CauseLine}
+earthquake|*|Earthquake shakes {City}|The ground split beneath {City} ({Band}); about {Loss} dead. Collapsed: {Lost}. {Counterfactual} {CauseLine}
+ashfall|*|Ash darkens the fields of {City}|Volcanic ash buries the harvest of {City}; farmers say the soil will be rich in years to come. {CauseLine}
+locusts|*|Locusts descend on {City}|Swarms strip the fields of {City}. {Response} {Counterfactual} {CauseLine}
+river_shift|*|The river abandons {City}|The river has moved its course, leaving the docks of {City} on dry mud. {CauseLine}
+canal_built|*|{City} digs a canal back to the river|Engineers of the {Civ} have reconnected {City} to the river. {CauseLine}
+port_decline|*|{City} fades as a port|Without its river, {City} is shrinking. {CauseLine}
+inundation|*|The sea claims the shore of {City}|Low quarters of {City} are underwater; the {Civ} {Response}. {Counterfactual} {CauseLine}
+cold_snap|*|Killing frost in {City}|A brutal winter in {City} ({Band}) leaves many dead. {Counterfactual} {CauseLine}
+fishery_collapse|*|The fish are gone from {City}'s waters|Fishers of {City} return with empty nets; the governor {Response}. {CauseLine}
+eruption|*|Eruption in {Region}|A volcano has erupted in {Region}. Affected: {Cities}. {CauseLine}
+
+# ---- health events
+plague|*|Plague reaches {City}|Sickness has arrived in {City} from {Source}. The city {Response}. {CauseLine}
+plague_peak|*|Plague peaks in {City}: {Loss} dead|The sickness in {City} is at its worst; it has spread to {Spread}. {Counterfactual} {CauseLine}
+plague_recedes|*|The plague recedes from {City}|Healers of {City} report no new cases. {CauseLine}
+plague_scapegoat|*|{City} blames the {Scapegoat} for the plague|As the plague recedes from {City}, crowds blame foreigners. {CauseLine}
+outbreak|*|Sickness spreads in crowded {City}|An outbreak fills the sickhouses of {City} ({Band}). {Counterfactual} {CauseLine}
+breakthrough|*|Physicians of {City} announce a breakthrough|The {Civ} report a cure that will save many lives. {CauseLine}
+contaminated_water|*|Poisoned water in {City}|The river water of {City} is fouled; officials {Response}. {Counterfactual} {CauseLine}
+healer|*|A famous healer in {City} {Result}|{CauseLine}
+
+# ---- political events
+corruption|*|Governor {Governor} exposed in {City}|Investigators found {Stolen} gold siphoned in {City} ({Band}); the governor was {Response}. {CauseLine}
+reform|*|Reform movement in {City}|A literate public demands a voice; the {Civ} {Response}. {CauseLine}
+agitation|*|"Look at {Rich}!" — agitators stir {City}|Pamphlets in {City} ({Band}) contrast its poverty with {Rich} of the {RichCiv}. {CauseLine}
+coup|*|Coup in {City}|A military coup in the {Civ} capital {Result}. {CauseLine}
+golden_age|*|A golden age dawns for the {Civ}|From {City}, prosperity spreads through the {Civ}. {CauseLine}
+ossification|*|The {Civ} drown in paperwork|Offices multiply and roads crumble in {City}. {CauseLine}
+
+# ---- cultural & military
+great_person|*|{Person}, {Field} of {City}, astonishes the world|{City} ({Band}) has produced a {Field} whose name will be remembered: {Person}. {CauseLine}
+forbidden_idea|*|A forbidden book circulates in {City}|The {Civ} {Response}. {CauseLine}
+raid_road|*|Raiders strike the road to {City}|Caravans bound for {City} ({Band}) lost {Loot} gold; the governor {Response}. {CauseLine}
+border_incident|*|Border incident between the {Civ} and the {Other}|Shots and insults on the border; the {Civ} {Response}. {CauseLine}
+mercenaries|*|{Company} offers its swords to {City}|For {Price} gold, {Company} would fight for the {Civ}. They {Response}. {CauseLine}
+arms_cache|*|Weapons cache found near {City}|The {Civ} armies are better equipped this decade. {CauseLine}
+industrial_accident|*|Disaster at the works of {City}: {Deaths} dead|An explosion tore through the factories of {City} ({Band}). {Counterfactual} {CauseLine}
+safety_reform|*|After the disaster, {City} enters a safety era|New laws in the {Civ} protect workers and rivers. {CauseLine}
+coverup|*|Cover-up scandal in {City}|Reports on the {City} disaster were buried; unrest grows. {CauseLine}
+omen|*|Light in the sky over {City}|A strange light appeared over {City}; {Reading}. {CauseLine}
+expedition|*|Expedition from {City} {Result}|{CauseLine}
+runaway|*|Runaway {Project} near {City}|An advanced {Project} of the {Civ} has failed catastrophically; cleanup will take years. {CauseLine}
+
+# ---- cosmic & stewardship
+meteor|*|Fire from the sky strikes {Region}|An impact has devastated {Region}. Struck: {Cities}. Interpretations differ: {Readings}. {CauseLine}
+great_quake|*|The earth heaves in {Region}|A great quake shook {Region}; struck: {Cities}. {CauseLine}
+solar_anomaly|*|A {Kind} year across the world|The sun behaved strangely this year: {Effect}. {CauseLine}
+impact_warning|*|Astronomers warn of an approaching body|A bright wanderer grows larger in the sky. {CauseLine}
+omen_witnessed|*|The people of {City} saw it happen|Witnesses in {City} watched a {Power}; they call it {Reading}. {CauseLine}
+departure|*|The {Civ} leave for the stars|Under {Leader}, the departure ship of the {Civ} has lifted from the world. The steward's long watch ends on a high note. {CauseLine}
+scenario_end|*|{Name}: the steward {Result}|Final score {Score}. {CauseLine}
+terminus|*|Silence|No thinking people remain. {CauseLine}
