@@ -13,7 +13,18 @@ fn batch(args: &[String]) {
     let seed: u64 = args.get(3).and_then(|s| s.parse().ok()).unwrap_or(7);
     let mut p = sim::planet::WorldParams::default();
     p.seed = seed;
-    let mut s = sim::Sim::new(p, sim::scenario::Mode::Chronicle, sim::Difficulty::Steward);
+    let mode = match args.get(4).map(|s| s.as_str()) {
+        Some("rivers") => sim::scenario::Mode::Scenario(sim::scenario::Scn::FirstRivers),
+        Some("ice") => sim::scenario::Mode::Scenario(sim::scenario::Scn::IceAtTheDoor),
+        Some("ash") => sim::scenario::Mode::Scenario(sim::scenario::Scn::AshenCentury),
+        Some("two") => sim::scenario::Mode::Scenario(sim::scenario::Scn::TwoContinents),
+        Some("sun") => sim::scenario::Mode::Challenge(sim::scenario::Challenge::DyingSun),
+        Some("tilt") => sim::scenario::Mode::Challenge(sim::scenario::Challenge::ExtremeTilt),
+        Some("super") => sim::scenario::Mode::Challenge(sim::scenario::Challenge::Supercontinent),
+        Some("impact") => sim::scenario::Mode::Challenge(sim::scenario::Challenge::ScheduledImpact),
+        _ => sim::scenario::Mode::Chronicle,
+    };
+    let mut s = sim::Sim::new(p, mode, sim::Difficulty::Steward);
     let t = std::time::Instant::now();
     for _ in 0..years {
         s.tick();
@@ -34,6 +45,7 @@ fn batch(args: &[String]) {
         bands,
         s.news.items.len()
     );
+    if let Some(e) = &s.ended { eprintln!("ENDED: {}", e); }
     println!("{}", s.chronicle_text());
 }
 
